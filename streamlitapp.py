@@ -22,10 +22,11 @@ streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 streamlit.dataframe(my_fruit_list)
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avacado','Straberries'])
-fruits_to_show = my_fruit_list.loc[fruits_selected]
-streamlit.dataframe(fruits_to_show)
-streamlit.text("I selected 'Avacado','Straberries'")
+#fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avacado','Straberries'])
+#fruits_to_show = my_fruit_list.loc[fruits_selected]
+#streamlit.dataframe(fruits_to_show)
+#streamlit.text("I selected 'Avacado','Straberries'")
+
 streamlit.header("Fruityvice Fruit Advice!")
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
