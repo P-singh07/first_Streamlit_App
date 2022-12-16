@@ -33,7 +33,7 @@ streamlit.dataframe(my_fruit_list)
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like information about?')
 if not fruit_choice:
 streamlit.write('The user entered ', fruit_choice)
 #streamlit.text(fruityvice_response.json())
@@ -47,10 +47,10 @@ streamlit.dataframe(fruityvice_normalized)
 except URLerror as e:
 streamlit.error(e)
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("the list fruit_load_list contains")
-streamlit.dataframe(my_data_rows)
-my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('From Streamlit')")
+#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#my_cur = my_cnx.cursor()
+#my_cur.execute("SELECT * from fruit_load_list")
+#my_data_rows = my_cur.fetchall()
+#streamlit.header("the list fruit_load_list contains")
+#streamlit.dataframe(my_data_rows)
+#my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('From Streamlit')")
