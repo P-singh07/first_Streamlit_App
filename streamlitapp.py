@@ -37,7 +37,7 @@ try:
   if not fruit_choice:
     streamlit.write('The user entered ', fruit_choice)
     #streamlit.text(fruityvice_response.json())
-  else
+  else:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # write your own comment -what does the next line do? 
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
